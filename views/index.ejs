@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="css/index.css" />
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    -->
+    <title>Register</title>
+</head>
+<body>
+    <div class="form">
+        <form action="/" method="POST">
+            <div class="title">REGISTER</div>
+            <% if(error) { %>
+                <script>
+                    alert("<%= errorMessage %>")
+                </script>>
+            <% } %>
+
+            <div class="input-container ic1">
+                <input id="firstname" class="input" type="text" placeholder=" " name="firstname" value="<%= firstname %>" autocomplete="off" required/>
+                <div class="cut"></div>
+                <label for="firstname" class="placeholder">First name</label>
+            </div>
+
+            <div class="input-container ic2">
+                <input id="lastname" class="input" type="text" placeholder=" " name="lastname" value="<%= lastname %>" autocomplete="off" required/>
+                <div class="cut"></div>
+                <label for="lastname" class="placeholder">Last name</label>
+            </div>
+
+            <div class="input-container ic2">
+                <input id="email" class="input" type="text" placeholder=" " name="email" autocomplete="off" value= "<%= email %>" required/>
+                <div class="cut cut-short"></div>
+                <label for="email" class="placeholder">Email</>
+            </div>
+
+            <div class="input-container ic2">
+                <input id="password" class="input" type="password" placeholder=" " name="password" value= "<%= password %>" autocomplete="off" required/>
+                <div class="cut cut-short"></div>
+                <label for="password" class="placeholder">Password</>
+            </div>
+
+            <div class="input-container ic2">
+                <input id="confirmpassword" class="input" type="password" placeholder=" " name="confirmpassword" value= "<%= confirmpassword %>" autocomplete="off" required/>
+                <div class="cut cut-short"></div>
+                <label for="password" class="placeholder">Confirm Password</>
+            </div>
+            <button type="submit" class="submit">Submit</button>
+            
+        
+        </form>
+        <form action="/send" method="GET">
+            <button type="submit" class="submit">Send Emails</button>
+        </form>
+        
+    </div>
+</body>
+</html>
